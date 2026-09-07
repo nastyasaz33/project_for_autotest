@@ -89,7 +89,7 @@ class ToDoList:
 
             choice = int(choice)
             # Проверка на выход к меню
-            if choice == "0":
+            if choice == 0:
                 return
 
             # Проверка на принадлежность введенного номера задачи к списку
@@ -195,6 +195,7 @@ def show_menu():
 print("===== Добро пожаловать в список ваших задач =====")
 
 # Вызывается меню до тех пор, пока не введем 0
-while True:
-    if not show_menu():
-        break
+if __name__ == "__main__":
+    while True:
+        if not show_menu():
+            break
