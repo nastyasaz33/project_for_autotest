@@ -151,6 +151,7 @@ class ToDoList:
         print(f"Всего задач: {total}")
         print(f"Выполнено: {completed}")
         print(f"Осталось: {not_completed}")
+        return total, completed, not_completed
 
 
 todo = ToDoList()
