@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Кеши и результаты тестов
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Настройки IDE и операционной системы
+.idea/
+.vscode/
+.DS_Store
