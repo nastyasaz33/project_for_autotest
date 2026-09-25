@@ -1,0 +1,26 @@
+[project]
+name = "to-do-list"
+version = "0.1.0"
+description = "A Python console application for managing a personal to-do list"
+readme = "README.md"
+authors = [
+    { name = "nastyasaz33", email = "nastyasazonova33@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+python_files = ["test_*.py", "*_test.py"]
+python_functions = ["test_*"]
+addopts = [
+  "-vv",				        # подробный вывод хода теста
+  "--import-mode=importlib"  	# меньше проблем с импортами
+]

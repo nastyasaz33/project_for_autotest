@@ -27,7 +27,7 @@ class ToDoList:
 
             # Проверка на возврат к меню
             if task == "0":
-                return
+                return False
 
             # Если условия выше не сработали, то создается словарь с задачей и добавляется в список
             new_task = {"name": task, "status": "Не выполнена"}
@@ -39,7 +39,7 @@ class ToDoList:
     def delete_task(self):
         if not self.tasks:
             print("\nУ вас еще нет задач")
-            return
+            return False
 
         self.show_tasks()
 
@@ -73,7 +73,7 @@ class ToDoList:
     def mark_task(self):
         if not self.tasks:
             print("\nУ вас еще нет задач")
-            return
+            return False
 
         self.show_tasks()
 
@@ -134,7 +134,7 @@ class ToDoList:
         # Проверка на наличие задач
         if not self.tasks:
             print("У вас еще нет задач")
-            return
+            return (0, 0, 0)
 
         total = len(self.tasks)
         not_completed = 0
@@ -151,6 +151,7 @@ class ToDoList:
         print(f"Всего задач: {total}")
         print(f"Выполнено: {completed}")
         print(f"Осталось: {not_completed}")
+        return total, completed, not_completed
 
 
 todo = ToDoList()
@@ -192,10 +193,10 @@ def show_menu():
     return True
 
 
-print("===== Добро пожаловать в список ваших задач =====")
 
 # Вызывается меню до тех пор, пока не введем 0
 if __name__ == "__main__":
+    print("===== Добро пожаловать в список ваших задач =====")
     while True:
         if not show_menu():
             break
